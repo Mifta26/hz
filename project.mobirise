@@ -1,0 +1,2652 @@
+{
+  "settings": {
+    "name": "HERBALZAMZAM.ID-clone-clone",
+    "currentPage": "herbalzamzam.html",
+    "theme": {
+      "name": "storem4",
+      "title": "StoreM4",
+      "styling": {
+        "primaryColor": "#009933",
+        "secondaryColor": "#FE525B",
+        "successColor": "#ffef00",
+        "infoColor": "#1BA1E2",
+        "warningColor": "#82786E",
+        "dangerColor": "#879A9F",
+        "mainFont": "Poppins",
+        "display1Font": "Poppins",
+        "display1Size": 4.5,
+        "display2Font": "Poppins",
+        "display2Size": 3,
+        "display5Font": "Comfortaa",
+        "display5Size": 1.5,
+        "display7Font": "Comfortaa",
+        "display7Size": 1.1,
+        "display4Font": "Poppins",
+        "display4Size": 1,
+        "isRoundedButtons": true,
+        "isAnimatedOnScroll": true,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#009933"
+      ]
+    },
+    "versionFirst": "4.5.2",
+    "uniqCompNum": 17,
+    "versionPublish": "4.5.2"
+  },
+  "pages": {
+    "page1.html": {
+      "settings": {
+        "title": "Page 1",
+        "order": 1
+      },
+      "components": [
+        {
+          "_styles": {
+            ".dropdown-item:before": {
+              "font-family": "MobiriseIcons !important",
+              "content": "'\\e966'",
+              "display": "inline-block",
+              "width": "0",
+              "position": "absolute",
+              "left": "1rem",
+              "top": "0.5rem",
+              "margin-right": "0.5rem",
+              "line-height": "1",
+              "font-size": "inherit",
+              "vertical-align": "middle",
+              "text-align": "center",
+              "overflow": "hidden",
+              "transform": "scale(0, 1)",
+              "-webkit-transition": "all 0.25s ease-in-out",
+              "-moz-transition": "all 0.25s ease-in-out",
+              "transition": "all 0.25s ease-in-out"
+            },
+            ".nav-item:focus, .nav-link:focus": {
+              "outline": "none"
+            },
+            "@media (min-width: 992px)": {
+              ".dropdown-item:hover:before": {
+                "transform": "scale(1, 1)",
+                "width": "16px"
+              },
+              ".nav-item .nav-link": {
+                "position": "relative",
+                "&::before": {
+                  "position": "absolute",
+                  "content": "''",
+                  "width": "0",
+                  "height": "3px",
+                  "bottom": "-0.5rem",
+                  "left": "50%",
+                  "background": "linear-gradient(90deg, @primaryColor, @secondaryColor)",
+                  "transition": "width 200ms linear, left 200ms linear"
+                }
+              },
+              ".nav-item.open .nav-link::before": {
+                "bottom": ".2rem",
+                "width": "80% !important",
+                "left": "10% !important"
+              },
+              ".nav-item .nav-link:hover::before": {
+                "width": "calc(100% ~'+' 2rem)",
+                "left": "-1rem"
+              }
+            },
+            ".dropdown .dropdown-menu .dropdown-item": {
+              "width": "auto",
+              "padding": "0.235em 2.5385em 0.235em 3.5385em",
+              "-webkit-transition": "all 0.25s ease-in-out",
+              "-moz-transition": "all 0.25s ease-in-out",
+              "transition": "all 0.25s ease-in-out",
+              "&::after": {
+                "right": "0.5rem"
+              },
+              "&:hover": {
+                ".mbr-iconfont:before": {
+                  "transform": "scale(0, 1)"
+                }
+              },
+              ".mbr-iconfont": {
+                "margin-left": "-1.8rem",
+                "padding-right": "1rem",
+                "font-size": "inherit",
+                "&:before": {
+                  "display": "inline-block",
+                  "transform": "scale(1, 1)",
+                  "-webkit-transition": "all 0.25s ease-in-out",
+                  "-moz-transition": "all 0.25s ease-in-out",
+                  "transition": "all 0.25s ease-in-out"
+                }
+              }
+            },
+            ".collapsed": {
+              ".dropdown-menu .dropdown-item:before": {
+                "display": "none"
+              },
+              ".dropdown .dropdown-menu .dropdown-item": {
+                "padding": "0.235em 1.5em 0.235em 1.5em !important",
+                "transition": "none",
+                "margin": "0 !important"
+              }
+            },
+            ".navbar": {
+              "min-height": "77px",
+              "justify-content": "center",
+              "flex-direction": "column",
+              "background": "none",
+              ".mbr-overlay": {
+                "transition": "all .3s",
+                "background": "@menuBgColor",
+                "& when (@gradientBg)": {
+                  "background": "linear-gradient(@menuBgColor2, @menuBgColor)"
+                },
+                "& when (@transparent)": {
+                  "background": "none"
+                }
+              },
+              "&.opened": {
+                ".mbr-overlay": {
+                  "transition": "all .3s",
+                  "background": "@menuBgColor !important",
+                  "& when (@gradientBg)": {
+                    "background": "linear-gradient(@menuBgColor2, @menuBgColor) !important"
+                  }
+                }
+              },
+              ".dropdown-item": {
+                "padding": ".25rem 1.5rem"
+              },
+              ".navbar-collapse": {
+                "width": "100%",
+                "flex-basis": "auto",
+                "justify-content": "center",
+                "z-index": "1",
+                "padding": ".5rem 1rem",
+                "& when not (@showItems)": {
+                  "display": "none !important"
+                }
+              },
+              "&.collapsed": {
+                "&.opened": {
+                  ".dropdown-menu": {
+                    "top": "0"
+                  }
+                },
+                ".navbar-collapse.show,.navbar-collapse.collapsing": {
+                  "transition": "all .3s linear",
+                  "display": "flex",
+                  "flex-direction": "column",
+                  ".brand-container": {
+                    "order": "-1"
+                  }
+                },
+                ".dropdown-menu": {
+                  "background": "transparent !important",
+                  ".dropdown-submenu": {
+                    "left": "0 !important"
+                  },
+                  ".dropdown-item:after": {
+                    "right": "auto"
+                  },
+                  ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]:after": {
+                    "margin-left": ".25rem",
+                    "border-top": "0.35em solid",
+                    "border-right": "0.35em solid transparent",
+                    "border-left": "0.35em solid transparent",
+                    "border-bottom": "0",
+                    "top": "55%"
+                  }
+                },
+                "ul.navbar-nav": {
+                  "li": {
+                    "margin": "auto"
+                  }
+                },
+                ".navbar-buttons": {
+                  "margin": "0",
+                  "display": "flex",
+                  "justify-content": "center",
+                  "flex-direction": "column"
+                },
+                ".dropdown-menu .dropdown-item": {
+                  "padding": ".25rem 1.5rem",
+                  "text-align": "center"
+                },
+                ".right-menu,.left-menu": {
+                  "flex-basis": "auto"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".navbar-collapse.show,.navbar-collapse.collapsing": {
+                  "transition": "all .3s linear",
+                  "display": "flex",
+                  "flex-direction": "column",
+                  ".brand-container": {
+                    "order": "-1"
+                  }
+                },
+                "&.opened": {
+                  ".dropdown-menu": {
+                    "top": "0"
+                  }
+                },
+                ".dropdown-menu": {
+                  "background": "transparent !important",
+                  ".dropdown-submenu": {
+                    "left": "0 !important"
+                  },
+                  ".dropdown-item:after": {
+                    "right": "auto"
+                  },
+                  ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]:after": {
+                    "margin-left": ".25rem",
+                    "border-top": "0.35em solid",
+                    "border-right": "0.35em solid transparent",
+                    "border-left": "0.35em solid transparent",
+                    "border-bottom": "0",
+                    "top": "55%"
+                  }
+                },
+                ".navbar-logo": {
+                  "img": {
+                    "height": "3.8rem !important"
+                  }
+                },
+                "ul.navbar-nav": {
+                  "li": {
+                    "margin": "auto"
+                  }
+                },
+                ".navbar-buttons": {
+                  "margin": "0",
+                  "display": "flex",
+                  "justify-content": "center",
+                  "flex-wrap": "wrap",
+                  "flex-direction": "column"
+                },
+                ".dropdown-menu .dropdown-item": {
+                  "padding": ".25rem 1.5rem",
+                  "text-align": "center"
+                },
+                ".right-menu,.left-menu": {
+                  "flex-basis": "auto"
+                }
+              },
+              "&.navbar-short": {
+                ".mbr-overlay": {
+                  "background": "@menuBgColor !important",
+                  "& when (@gradientBg)": {
+                    "background": "linear-gradient(@menuBgColor2, @menuBgColor) !important"
+                  }
+                },
+                "min-height": "60px",
+                ".navbar-logo": {
+                  "img": {
+                    "height": "3rem !important"
+                  }
+                },
+                ".navbar-brand": {
+                  "padding": "0"
+                }
+              }
+            },
+            ".navbar-brand": {
+              "align-items": "center",
+              "margin-right": "0",
+              "padding": "0",
+              "transition": "all .3s",
+              "word-break": "break-word",
+              "z-index": "1",
+              ".navbar-caption": {
+                "line-height": "inherit !important"
+              },
+              ".navbar-logo a": {
+                "outline": "none"
+              }
+            },
+            ".dropdown-item.active,.dropdown-item:active": {
+              "background-color": "transparent"
+            },
+            ".navbar-expand-lg .navbar-nav .nav-link": {
+              "padding": "0"
+            },
+            ".nav-dropdown .link.dropdown-toggle": {
+              "margin-right": "1.667em",
+              "&[aria-expanded=\"true\"]": {
+                "margin-right": "0",
+                "padding": "0.667em 1.667em"
+              }
+            },
+            ".navbar.navbar-expand-lg .dropdown": {
+              ".dropdown-menu": {
+                "background": "@menuBgColor",
+                ".dropdown-submenu": {
+                  "margin": "0",
+                  "left": "100%"
+                }
+              }
+            },
+            ".navbar .dropdown.open > .dropdown-menu": {
+              "display": "block"
+            },
+            "ul.navbar-nav": {
+              "flex-wrap": "wrap"
+            },
+            ".navbar-buttons": {
+              "margin-left": "auto"
+            },
+            "button.navbar-toggler": {
+              "width": "31px",
+              "height": "20px",
+              "cursor": "pointer",
+              "transition": "all .2s",
+              "position": "relative",
+              "margin": "1rem",
+              "align-self": "center",
+              ".hamburger span": {
+                "position": "absolute",
+                "right": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "top": "0",
+                  "transition": "all .2s"
+                },
+                "&:nth-child(2)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(3)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(4)": {
+                  "top": "16px",
+                  "transition": "all .2s"
+                }
+              }
+            },
+            "nav.opened .hamburger span": {
+              "&:nth-child(1)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "transition": "all .2s"
+              },
+              "&:nth-child(2)": {
+                "-webkit-transform": "rotate(45deg)",
+                "transform": "rotate(45deg)",
+                "transition": "all .25s",
+                "width": "20px",
+                "right": "-2px"
+              },
+              "&:nth-child(3)": {
+                "-webkit-transform": "rotate(-45deg)",
+                "transform": "rotate(-45deg)",
+                "transition": "all .25s",
+                "width": "20px",
+                "left": "-2px"
+              },
+              "&:nth-child(4)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "transition": "all .2s"
+              }
+            },
+            ".navbar-dropdown": {
+              "& when (@sticky)": {
+                "position": "fixed"
+              }
+            },
+            "a.nav-link": {
+              "display": "flex",
+              "align-items": "center",
+              "justify-content": "center"
+            },
+            ".mbr-iconfont": {
+              "font-size": "1.5rem",
+              "padding-right": ".5rem"
+            },
+            ".right-menu,.left-menu": {
+              "flex-basis": "50%"
+            },
+            ".left-menu": {
+              ".navbar-nav": {
+                "justify-content": "flex-end",
+                "ul": {
+                  "justify-content": "flex-end"
+                }
+              }
+            },
+            ".brand-container": {
+              "padding": "0 2rem",
+              "flex-shrink": "0"
+            },
+            ".menu-top": {
+              "text-align": "center",
+              "width": "100%",
+              "background-color": "@topBgColor",
+              "padding": ".5rem 0"
+            },
+            ".full-link": {
+              "width": "100%",
+              "font-size": "0",
+              "z-index": "2"
+            },
+            ".card-wrapper": {
+              "z-index": "3"
+            },
+            ".popup-btn": {
+              "&.card-wrapper": {
+                "z-index": "1 !important"
+              }
+            },
+            "& when (@collapsed)": {
+              ".navbar-collapse": {
+                "padding-top": "0"
+              }
+            },
+            "& when (@showTop)": {
+              ".opened": {
+                "padding-top": ".5rem"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".navbar-collapse": {
+                "padding-top": "0"
+              }
+            },
+            "@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)": {
+              ".nav-item .nav-link:hover::before": {
+                "width": "175%",
+                "max-width": "calc(100% ~'+' 2rem)",
+                "left": "-1rem"
+              }
+            }
+          },
+          "_name": "menu2",
+          "_customHTML": "<section class=\"menu popup-btn-cards\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"3.8\" max=\"8\" step=\"0.1\" value=\"3.8\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked>\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Show Top Line\" name=\"showTop\" checked>\n        <input type=\"text\" title=\"Link\" name=\"linkValue\" value=\"http://www.mobirise.com\" condition=\"showTop\">\n        <input type=\"color\" title=\"Top Line BG Color\" name=\"topBgColor\" value=\"#009933\" condition=\"showTop\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#232323\">\n        <input type=\"color\" title=\"BG Color\" name=\"menuBgColor\" value=\"#ffffff\">\n        <input type=\"checkbox\" title=\"Gradient BG\" name=\"gradientBg\">\n        <input type=\"color\" title=\"BG Color 2\" name=\"menuBgColor2\" value=\"#52bdf1\" condition=\"gradientBg\">\n        <input type=\"range\" inline title=\"BG Opacity\" name=\"bgOpacity\" min=\"0.5\" max=\"1\" step=\"0.1\" value=\"0.9\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top':sticky,\n                     'navbar-expand-lg':!collapsed,\n                     'collapsed':collapsed}\">\n        <div class=\"mbr-overlay\" mbr-style=\"{'opacity': bgOpacity}\"></div>\n\n      <a class=\"full-link\" href=\"{{linkValue}}\" mbr-if=\"showTop\">\n        <div mbr-text class=\"menu-top card-wrapper mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showTop\" data-app-selector=\".menu-top\">Jumadil Ula Sale - Save Rp 100.000</div>\n      </a>\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            \n        <div class=\"left-menu\">\n          <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n                  <a class=\"nav-link link text-black\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">Promo</a>\n              </li></ul>\n        </div>\n\n        <div class=\"brand-container\">\n          <div class=\"navbar-brand\">\n              <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                  <a href=\"https://herbalzamzam.id\">\n                      <img src=\"@PROJECT_PATH@/assets/images/herbal-zamzam-id-logo-863x1038.png\" alt=\"Herbal Zamzam\" mbr-style=\"{'height': logoSize + 'rem'}\" title>\n                  </a>\n              </span>\n              <span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-7\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-black\" data-app-selector=\".navbar-caption\" href=\"https://mobirise.com\">Herbalzamzam.id</a></span>\n          </div>\n        </div>\n\n        <div class=\"right-menu\">\n          <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n                <a class=\"nav-link link text-black\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">Tentang Kami</a>\n            </li></ul>\n        </div>\n      </div>\n\n          <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems\">\n            <div class=\"hamburger\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </div>\n          </button>\n    </nav>\n</section>",
+          "_cid": "qELJ8xNRXl",
+          "_anchor": "menu2-c",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        }
+      ]
+    },
+    "herbalzamzam.html": {
+      "settings": {
+        "main": true,
+        "title": "Herbal Zamzam",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            ".dropdown-item:before": {
+              "font-family": "MobiriseIcons !important",
+              "content": "'\\e966'",
+              "display": "inline-block",
+              "width": "0",
+              "position": "absolute",
+              "left": "1rem",
+              "top": "0.5rem",
+              "margin-right": "0.5rem",
+              "line-height": "1",
+              "font-size": "inherit",
+              "vertical-align": "middle",
+              "text-align": "center",
+              "overflow": "hidden",
+              "transform": "scale(0, 1)",
+              "-webkit-transition": "all 0.25s ease-in-out",
+              "-moz-transition": "all 0.25s ease-in-out",
+              "transition": "all 0.25s ease-in-out"
+            },
+            ".nav-item:focus, .nav-link:focus": {
+              "outline": "none"
+            },
+            "@media (min-width: 992px)": {
+              ".dropdown-item:hover:before": {
+                "transform": "scale(1, 1)",
+                "width": "16px"
+              },
+              ".nav-item .nav-link": {
+                "position": "relative",
+                "&::before": {
+                  "position": "absolute",
+                  "content": "''",
+                  "width": "0",
+                  "height": "3px",
+                  "bottom": "-0.5rem",
+                  "left": "50%",
+                  "background": "linear-gradient(90deg, @primaryColor, @secondaryColor)",
+                  "transition": "width 200ms linear, left 200ms linear"
+                }
+              },
+              ".nav-item.open .nav-link::before": {
+                "bottom": ".2rem",
+                "width": "80% !important",
+                "left": "10% !important"
+              },
+              ".nav-item .nav-link:hover::before": {
+                "width": "calc(100% ~'+' 2rem)",
+                "left": "-1rem"
+              }
+            },
+            ".dropdown .dropdown-menu .dropdown-item": {
+              "width": "auto",
+              "padding": "0.235em 2.5385em 0.235em 3.5385em",
+              "-webkit-transition": "all 0.25s ease-in-out",
+              "-moz-transition": "all 0.25s ease-in-out",
+              "transition": "all 0.25s ease-in-out",
+              "&::after": {
+                "right": "0.5rem"
+              },
+              "&:hover": {
+                ".mbr-iconfont:before": {
+                  "transform": "scale(0, 1)"
+                }
+              },
+              ".mbr-iconfont": {
+                "margin-left": "-1.8rem",
+                "padding-right": "1rem",
+                "font-size": "inherit",
+                "&:before": {
+                  "display": "inline-block",
+                  "transform": "scale(1, 1)",
+                  "-webkit-transition": "all 0.25s ease-in-out",
+                  "-moz-transition": "all 0.25s ease-in-out",
+                  "transition": "all 0.25s ease-in-out"
+                }
+              }
+            },
+            ".collapsed": {
+              ".dropdown-menu .dropdown-item:before": {
+                "display": "none"
+              },
+              ".dropdown .dropdown-menu .dropdown-item": {
+                "padding": "0.235em 1.5em 0.235em 1.5em !important",
+                "transition": "none",
+                "margin": "0 !important"
+              }
+            },
+            ".navbar": {
+              "min-height": "77px",
+              "justify-content": "center",
+              "flex-direction": "column",
+              "background": "none",
+              ".mbr-overlay": {
+                "transition": "all .3s",
+                "background": "@menuBgColor",
+                "& when (@gradientBg)": {
+                  "background": "linear-gradient(@menuBgColor2, @menuBgColor)"
+                },
+                "& when (@transparent)": {
+                  "background": "none"
+                }
+              },
+              "&.opened": {
+                ".mbr-overlay": {
+                  "transition": "all .3s",
+                  "background": "@menuBgColor !important",
+                  "& when (@gradientBg)": {
+                    "background": "linear-gradient(@menuBgColor2, @menuBgColor) !important"
+                  }
+                }
+              },
+              ".dropdown-item": {
+                "padding": ".25rem 1.5rem"
+              },
+              ".navbar-collapse": {
+                "width": "100%",
+                "flex-basis": "auto",
+                "justify-content": "center",
+                "z-index": "1",
+                "padding": ".5rem 1rem",
+                "& when not (@showItems)": {
+                  "display": "none !important"
+                }
+              },
+              "&.collapsed": {
+                "&.opened": {
+                  ".dropdown-menu": {
+                    "top": "0"
+                  }
+                },
+                ".navbar-collapse.show,.navbar-collapse.collapsing": {
+                  "transition": "all .3s linear",
+                  "display": "flex",
+                  "flex-direction": "column",
+                  ".brand-container": {
+                    "order": "-1"
+                  }
+                },
+                ".dropdown-menu": {
+                  "background": "transparent !important",
+                  ".dropdown-submenu": {
+                    "left": "0 !important"
+                  },
+                  ".dropdown-item:after": {
+                    "right": "auto"
+                  },
+                  ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]:after": {
+                    "margin-left": ".25rem",
+                    "border-top": "0.35em solid",
+                    "border-right": "0.35em solid transparent",
+                    "border-left": "0.35em solid transparent",
+                    "border-bottom": "0",
+                    "top": "55%"
+                  }
+                },
+                "ul.navbar-nav": {
+                  "li": {
+                    "margin": "auto"
+                  }
+                },
+                ".navbar-buttons": {
+                  "margin": "0",
+                  "display": "flex",
+                  "justify-content": "center",
+                  "flex-direction": "column"
+                },
+                ".dropdown-menu .dropdown-item": {
+                  "padding": ".25rem 1.5rem",
+                  "text-align": "center"
+                },
+                ".right-menu,.left-menu": {
+                  "flex-basis": "auto"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".navbar-collapse.show,.navbar-collapse.collapsing": {
+                  "transition": "all .3s linear",
+                  "display": "flex",
+                  "flex-direction": "column",
+                  ".brand-container": {
+                    "order": "-1"
+                  }
+                },
+                "&.opened": {
+                  ".dropdown-menu": {
+                    "top": "0"
+                  }
+                },
+                ".dropdown-menu": {
+                  "background": "transparent !important",
+                  ".dropdown-submenu": {
+                    "left": "0 !important"
+                  },
+                  ".dropdown-item:after": {
+                    "right": "auto"
+                  },
+                  ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]:after": {
+                    "margin-left": ".25rem",
+                    "border-top": "0.35em solid",
+                    "border-right": "0.35em solid transparent",
+                    "border-left": "0.35em solid transparent",
+                    "border-bottom": "0",
+                    "top": "55%"
+                  }
+                },
+                ".navbar-logo": {
+                  "img": {
+                    "height": "3.8rem !important"
+                  }
+                },
+                "ul.navbar-nav": {
+                  "li": {
+                    "margin": "auto"
+                  }
+                },
+                ".navbar-buttons": {
+                  "margin": "0",
+                  "display": "flex",
+                  "justify-content": "center",
+                  "flex-wrap": "wrap",
+                  "flex-direction": "column"
+                },
+                ".dropdown-menu .dropdown-item": {
+                  "padding": ".25rem 1.5rem",
+                  "text-align": "center"
+                },
+                ".right-menu,.left-menu": {
+                  "flex-basis": "auto"
+                }
+              },
+              "&.navbar-short": {
+                ".mbr-overlay": {
+                  "background": "@menuBgColor !important",
+                  "& when (@gradientBg)": {
+                    "background": "linear-gradient(@menuBgColor2, @menuBgColor) !important"
+                  }
+                },
+                "min-height": "60px",
+                ".navbar-logo": {
+                  "img": {
+                    "height": "3rem !important"
+                  }
+                },
+                ".navbar-brand": {
+                  "padding": "0"
+                }
+              }
+            },
+            ".navbar-brand": {
+              "align-items": "center",
+              "margin-right": "0",
+              "padding": "0",
+              "transition": "all .3s",
+              "word-break": "break-word",
+              "z-index": "1",
+              ".navbar-caption": {
+                "line-height": "inherit !important"
+              },
+              ".navbar-logo a": {
+                "outline": "none"
+              }
+            },
+            ".dropdown-item.active,.dropdown-item:active": {
+              "background-color": "transparent"
+            },
+            ".navbar-expand-lg .navbar-nav .nav-link": {
+              "padding": "0"
+            },
+            ".nav-dropdown .link.dropdown-toggle": {
+              "margin-right": "1.667em",
+              "&[aria-expanded=\"true\"]": {
+                "margin-right": "0",
+                "padding": "0.667em 1.667em"
+              }
+            },
+            ".navbar.navbar-expand-lg .dropdown": {
+              ".dropdown-menu": {
+                "background": "@menuBgColor",
+                ".dropdown-submenu": {
+                  "margin": "0",
+                  "left": "100%"
+                }
+              }
+            },
+            ".navbar .dropdown.open > .dropdown-menu": {
+              "display": "block"
+            },
+            "ul.navbar-nav": {
+              "flex-wrap": "wrap"
+            },
+            ".navbar-buttons": {
+              "margin-left": "auto"
+            },
+            "button.navbar-toggler": {
+              "width": "31px",
+              "height": "20px",
+              "cursor": "pointer",
+              "transition": "all .2s",
+              "position": "relative",
+              "margin": "1rem",
+              "align-self": "center",
+              ".hamburger span": {
+                "position": "absolute",
+                "right": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "top": "0",
+                  "transition": "all .2s"
+                },
+                "&:nth-child(2)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(3)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(4)": {
+                  "top": "16px",
+                  "transition": "all .2s"
+                }
+              }
+            },
+            "nav.opened .hamburger span": {
+              "&:nth-child(1)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "transition": "all .2s"
+              },
+              "&:nth-child(2)": {
+                "-webkit-transform": "rotate(45deg)",
+                "transform": "rotate(45deg)",
+                "transition": "all .25s",
+                "width": "20px",
+                "right": "-2px"
+              },
+              "&:nth-child(3)": {
+                "-webkit-transform": "rotate(-45deg)",
+                "transform": "rotate(-45deg)",
+                "transition": "all .25s",
+                "width": "20px",
+                "left": "-2px"
+              },
+              "&:nth-child(4)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "transition": "all .2s"
+              }
+            },
+            ".navbar-dropdown": {
+              "& when (@sticky)": {
+                "position": "fixed"
+              }
+            },
+            "a.nav-link": {
+              "display": "flex",
+              "align-items": "center",
+              "justify-content": "center"
+            },
+            ".mbr-iconfont": {
+              "font-size": "1.5rem",
+              "padding-right": ".5rem"
+            },
+            ".right-menu,.left-menu": {
+              "flex-basis": "50%"
+            },
+            ".left-menu": {
+              ".navbar-nav": {
+                "justify-content": "flex-end",
+                "ul": {
+                  "justify-content": "flex-end"
+                }
+              }
+            },
+            ".brand-container": {
+              "padding": "0 2rem",
+              "flex-shrink": "0"
+            },
+            ".menu-top": {
+              "text-align": "center",
+              "width": "100%",
+              "background-color": "@topBgColor",
+              "padding": ".5rem 0"
+            },
+            ".full-link": {
+              "width": "100%",
+              "font-size": "0",
+              "z-index": "2"
+            },
+            ".card-wrapper": {
+              "z-index": "3"
+            },
+            ".popup-btn": {
+              "&.card-wrapper": {
+                "z-index": "1 !important"
+              }
+            },
+            "& when (@collapsed)": {
+              ".navbar-collapse": {
+                "padding-top": "0"
+              }
+            },
+            "& when (@showTop)": {
+              ".opened": {
+                "padding-top": ".5rem"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".navbar-collapse": {
+                "padding-top": "0"
+              }
+            },
+            "@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)": {
+              ".nav-item .nav-link:hover::before": {
+                "width": "175%",
+                "max-width": "calc(100% ~'+' 2rem)",
+                "left": "-1rem"
+              }
+            }
+          },
+          "_name": "menu2",
+          "_customHTML": "<section class=\"menu popup-btn-cards\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"3.8\" max=\"8\" step=\"0.1\" value=\"3.8\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked>\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Show Top Line\" name=\"showTop\" checked>\n        <input type=\"text\" title=\"Link\" name=\"linkValue\" value=\"http://www.herbalzamzam.id\" condition=\"showTop\">\n        <input type=\"color\" title=\"Top Line BG Color\" name=\"topBgColor\" value=\"#009933\" condition=\"showTop\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#232323\">\n        <input type=\"color\" title=\"BG Color\" name=\"menuBgColor\" value=\"#ffffff\">\n        <input type=\"checkbox\" title=\"Gradient BG\" name=\"gradientBg\">\n        <input type=\"color\" title=\"BG Color 2\" name=\"menuBgColor2\" value=\"#52bdf1\" condition=\"gradientBg\">\n        <input type=\"range\" inline title=\"BG Opacity\" name=\"bgOpacity\" min=\"0.5\" max=\"1\" step=\"0.1\" value=\"0.9\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top':sticky,\n                     'navbar-expand-lg':!collapsed,\n                     'collapsed':collapsed}\">\n        <div class=\"mbr-overlay\" mbr-style=\"{'opacity': bgOpacity}\"></div>\n\n      <a class=\"full-link\" href=\"{{linkValue}}\" mbr-if=\"showTop\">\n        <div mbr-text class=\"menu-top card-wrapper mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showTop\" data-app-selector=\".menu-top\">Jumadil Ula Sale - Save Rp 100.000</div>\n      </a>\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            \n        <div class=\"left-menu\">\n          <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n                  <a class=\"nav-link link text-black\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">Promo</a>\n              </li></ul>\n        </div>\n\n        <div class=\"brand-container\">\n          <div class=\"navbar-brand\">\n              <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                  <a href=\"https://herbalzamzam.id\">\n                      <img src=\"@PROJECT_PATH@/assets/images/herbal-zamzam-id-logo-863x1038.png\" alt=\"Herbal Zamzam\" mbr-style=\"{'height': logoSize + 'rem'}\" title>\n                  </a>\n              </span>\n              <span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-7\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-black\" data-app-selector=\".navbar-caption\" href=\"https://mobirise.com\">Herbalzamzam.id</a></span>\n          </div>\n        </div>\n\n        <div class=\"right-menu\">\n          <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n                <a class=\"nav-link link text-black\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">Tentang Kami</a>\n            </li></ul>\n        </div>\n      </div>\n\n          <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems\">\n            <div class=\"hamburger\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </div>\n          </button>\n    </nav>\n</section>",
+          "_cid": "qELJ8xNRXl",
+          "_anchor": "menu2-0",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        },
+        {
+          "_params": {
+            "autoplay": true,
+            "animType": "carousel",
+            "theme": "drive",
+            "slides": [
+              {
+                "image": "@PROJECT_PATH@/assets/images/est-2012-1024x576.jpg",
+                "linkUrl": "http://google.com",
+                "link": true,
+                "src": "@PROJECT_PATH@/assets/images/est-2012-1024x576.jpg",
+                "tooltip": "@PROJECT_PATH@/assets/images/est-2012-85x47.png",
+                "title": "GOLD G",
+                "text": "HERBAL ZAMZAM",
+                "active": false
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/3-2-1024x576.jpg",
+                "linkUrl": "http://google.com",
+                "link": true,
+                "src": "@PROJECT_PATH@/assets/images/3-1-1024x576.jpg",
+                "tooltip": "@PROJECT_PATH@/assets/images/3-2-85x47.png",
+                "title": "Cuka Apel",
+                "text": "Tahesta",
+                "active": true
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/1-1024x576.jpg",
+                "linkUrl": "http://herbalzamzam.id/kurmaajwa",
+                "link": true,
+                "src": "@PROJECT_PATH@/assets/images/1-1024x576.png",
+                "tooltip": "@PROJECT_PATH@/assets/images/1-1-85x47.png",
+                "title": "Kurma Ajwa",
+                "text": "HERBAL ZAMZAM",
+                "active": false
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/4-1024x576.jpg",
+                "linkUrl": "http://google.com",
+                "link": true,
+                "src": "@PROJECT_PATH@/assets/images/4-1024x576.png",
+                "tooltip": "@PROJECT_PATH@/assets/images/4-85x47.png",
+                "title": "Aneka",
+                "text": "Herbal Zamzam",
+                "active": false
+              }
+            ],
+            "fullScreen": true,
+            "showCaptions": true,
+            "hideControls": false,
+            "responsive": "1",
+            "paddingTop": "3",
+            "paddingBottom": "0",
+            "captionsEffect": "slide",
+            "showBullets": true,
+            "bgColor": "#ffffff",
+            "timeout": "1",
+            "duration": 2,
+            "customSize": false,
+            "customWidth": "1600",
+            "customHeight": "1080",
+            "size": "1024x576",
+            "width": "1024",
+            "height": "576"
+          },
+          "articleLayout": false,
+          "alias": "wowslider",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "wowslider",
+          "_anchor": "wowslider-4"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".container-fluid": {
+              "padding": "0 3rem"
+            },
+            ".mbr-section-title": {
+              "color": "#ffef00",
+              "text-align": "center"
+            },
+            ".btn": {
+              "margin-top": "0"
+            },
+            ".media-container-column": {
+              "padding": "0 2rem"
+            },
+            "@media (max-width: 767px)": {
+              ".container-fluid": {
+                "padding": "0 1rem"
+              },
+              ".btn": {
+                "margin-top": "0.4rem"
+              },
+              ".mbr-section-btn": {
+                "margin": "0"
+              }
+            },
+            ".mbr-section-subtitle": {
+              "text-align": "center",
+              "color": "#ffffff"
+            }
+          },
+          "_name": "info2",
+          "_customHTML": "<section group=\"Info info2\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Button\" name=\"showButton\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/img/04.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#009933\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container-fluid\">\n        <div class=\"row justify-content-center\">\n            <div class=\"media-container-column col-12 col-lg-8 col-md-6\" mbr-if=\"showTitle || showSubtitle\">\n                <h2 mbr-if=\"showTitle\" class=\"mbr-section-title align-left mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\">DISKON 100.000</h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-left mbr-fonts-style mbr-light mbr-white\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">Ayo Belanja di bulan Jumadil Ula.<br>Klik Tombol di bawah untuk mendapatkan diskon 100.000</h3>\n            </div>\n            <div class=\"media-container-column col-12 col-lg-4 col-md-6\" mbr-if=\"showButton\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-white-outline\" href=\"herbalzamzam.html#shop1-6\">START SHOPPING</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qEU1mlYaYu",
+          "_anchor": "info2-g",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-shop": {
+              "display": "table",
+              "width": "100%"
+            },
+            ".mbr-shop .row": {
+              "margin": "0"
+            },
+            ".mbr-shop .btn-sm": {
+              "margin": "0.2rem 0.2rem"
+            },
+            ".mbr-shop .shoppingcart-icons": {
+              "z-index": "105 !important"
+            },
+            ".mbr-shop .shop-title": {
+              "margin-bottom": "18px",
+              "padding-left": "25px",
+              "padding-right": "25px",
+              "display": "inline-block",
+              "max-width": "80%"
+            },
+            ".mbr-shop .sidebar-title": {
+              "line-height": "25px"
+            },
+            ".mbr-shop .shopItemsModal_wraper": {
+              "position": "fixed",
+              "display": "none",
+              "align-items": "center",
+              "justify-content": "center",
+              "width": "100%",
+              "height": "100%",
+              "background-color": "rgba(87, 87, 87, 0.4)",
+              "top": "0",
+              "cursor": "pointer",
+              "z-index": "1040"
+            },
+            ".mbr-shop .card-description": {
+              "cursor": "text",
+              "display": "none"
+            },
+            ".mbr-shop .image-modal": {
+              "padding-left": "0",
+              "padding-right": "0",
+              "text-align": "center"
+            },
+            ".mbr-shop .image-modal img": {
+              "max-width": "100%",
+              "max-height": "75vh"
+            },
+            ".mbr-shop .hide-modal": {
+              "display": "none"
+            },
+            ".mbr-shop .shopItemsModal": {
+              "cursor": "default",
+              "padding": "50px",
+              "width": "1000px",
+              "max-width": "100%",
+              "background-color": "#ffffff",
+              "z-index": "2000",
+              "overflow": "auto",
+              "position": "fixed"
+            },
+            ".mbr-shop .shopItemsModal p": {
+              "margin-bottom": "0"
+            },
+            ".mbr-shop .shopItemsModal ul": {
+              "margin-bottom": "0"
+            },
+            ".mbr-shop .shopItemsModal .card-description": {
+              "display": "block",
+              "width": "100%"
+            },
+            ".mbr-shop .shopItemsModal .close-modal": {
+              "content": "''",
+              "position": "absolute",
+              "top": "0",
+              "right": "0",
+              "width": "50px",
+              "height": "4px",
+              "background-color": "red",
+              "transform": "rotate(45deg)",
+              "-webkit-transform": "rotate(45deg)"
+            },
+            ".mbr-shop .shopItemsModal .close-modal:before": {
+              "content": "''",
+              "position": "absolute",
+              "top": "0",
+              "right": "0",
+              "width": "50px",
+              "height": "4px",
+              "background-color": "red",
+              "transform": "rotate(-45deg)",
+              "-webkit-transform": "rotate(-45deg)"
+            },
+            ".mbr-shop .test-overlay": {
+              "position": "absolute",
+              "width": "100%",
+              "height": "100%",
+              "background-color": "rgba(0, 0, 0, 0.5)"
+            },
+            ".mbr-shop .filter-by-pu, .mbr-shop .filter-by-pd, .mbr-shop .filter-by-d": {
+              "display": "inline-block",
+              "margin-right": "3px"
+            },
+            ".mbr-shop .sort-buttons": {
+              "padding-bottom": "1rem",
+              "margin-right": "13px",
+              "text-align": "right"
+            },
+            ".mbr-shop .galleryItem:before": {
+              "width": "0 !important",
+              "height": "0 !important"
+            },
+            ".mbr-shop .modal-dialog": {
+              "max-width": "700px"
+            },
+            ".mbr-shop .mbr-gallery-item": {
+              "left": "0 !important",
+              "top": "0 !important",
+              "vertical-align": "top",
+              "position": "relative !important",
+              "transform": "none !important",
+              "padding": "10px"
+            },
+            ".mbr-shop .galleryItem h4, .mbr-shop .carousel-item h4": {
+              "font-style": "normal",
+              "line-height": "1",
+              "text-transform": "none",
+              "letter-spacing": "-1px",
+              "word-spacing": "0",
+              "margin-bottom": "0.3rem",
+              "padding-top": "15px",
+              "transition": "color 0.5s"
+            },
+            ".mbr-shop .galleryItem h5, .mbr-shop .carousel-item h5": {
+              "font-style": "italic",
+              "font-weight": "400",
+              "line-height": "22.36px",
+              "text-transform": "none",
+              "letter-spacing": "0px",
+              "word-spacing": "0"
+            },
+            ".mbr-shop .galleryItem p, .mbr-shop .carousel-item p": {
+              "font-style": "italic",
+              "font-weight": "400",
+              "text-transform": "none",
+              "letter-spacing": "0px",
+              "word-spacing": "0px",
+              "text-align": "center",
+              "display": "inline"
+            },
+            ".mbr-shop .item-button": {
+              "text-align": "center"
+            },
+            ".mbr-shop .modalButton": {
+              "display": "inline-block",
+              "float": "right",
+              "margin-right": "10px"
+            },
+            ".mbr-shop .modalButton.btn-success": {
+              "right": "15%"
+            },
+            ".mbr-shop .sidebar": {
+              "margin-top": "30px",
+              "position": "relative"
+            },
+            ".mbr-shop .sidebar-block": {
+              "position": "relative"
+            },
+            ".mbr-shop .sidebar-background:after": {
+              "content": "''",
+              "position": "absolute",
+              "width": "100%",
+              "height": "102%",
+              "background-color": "rgba(0, 0, 0, 0.05)",
+              "top": "-20px",
+              "right": "3px"
+            },
+            ".mbr-shop .bestsellers": {
+              "padding-left": "0",
+              "padding-right": "0",
+              "position": "relative",
+              "margin-bottom": "20px"
+            },
+            ".mbr-shop .bestsellers .onsale": {
+              "top": "-15px"
+            },
+            ".mbr-shop .bestsellers .price-block": {
+              "padding-top": "5px",
+              "text-align": "left",
+              "line-height": "1"
+            },
+            ".mbr-shop .bestsellers .mbr-gallery-item": {
+              "width": "100%"
+            },
+            ".mbr-shop .bestsellers .mbr-gallery-item img": {
+              "width": "80px",
+              "float": "left",
+              "margin-right": "20px"
+            },
+            ".mbr-shop .bestsellers .mbr-gallery-item h4": {
+              "text-align": "left",
+              "padding-bottom": "5px",
+              "line-height": "1",
+              "border-bottom": "1px dotted #d6d6d6"
+            },
+            ".mbr-shop .bestsellers .mbr-gallery-item h5": {
+              "text-align": "left",
+              "display": "none"
+            },
+            ".mbr-shop .bestsellers .mbr-gallery-item p": {
+              "text-align": "left"
+            },
+            ".mbr-shop .bestsellers .btn": {
+              "display": "none"
+            },
+            ".mbr-shop .bestsellers-img": {
+              "display": "inline-block",
+              "width": "80px",
+              "height": "80px",
+              "overflow": "hidden"
+            },
+            ".mbr-shop .bestsellers-title": {
+              "display": "inline-block"
+            },
+            ".mbr-shop .onsale": {
+              "position": "absolute",
+              "top": "5px",
+              "right": "5px",
+              "display": "block",
+              "transition": "color .3s ease",
+              "text-align": "center",
+              "z-index": "100",
+              "height": "30px",
+              "line-height": "30px",
+              "padding": "0 15px",
+              "background": "@saleBg",
+              "border-radius": "30px",
+              "font-weight": "400",
+              "font-style": "normal",
+              "text-transform": "none",
+              "letter-spacing": "0px"
+            },
+            ".mbr-shop .mbr-gallery-item__hided": {
+              "display": "none"
+            },
+            ".mbr-shop .mbr-gallery-item__hided h4, .mbr-shop .mbr-gallery-item__hided h5, .mbr-shop .mbr-gallery-item__hided p": {
+              "display": "none"
+            },
+            ".mbr-shop .mbr-gallery-item__hided .btn": {
+              "display": "none"
+            },
+            ".mbr-shop .galleryItem .price-block": {
+              "display": "block",
+              "margin-bottom": "8px"
+            },
+            ".mbr-shop .galleryItem .price-block span": {
+              "font-style": "normal",
+              "font-weight": "700",
+              "line-height": "1",
+              "text-transform": "none",
+              "letter-spacing": "-1px",
+              "word-spacing": "0"
+            },
+            ".mbr-shop .mbr-gallery-filter": {
+              "padding-left": "0",
+              "text-align": "left",
+              "padding-top": "0"
+            },
+            ".mbr-shop .mbr-gallery-filter ul li": {
+              "position": "relative",
+              "padding": "7px 0 7px 25px",
+              "border-bottom": "1px dotted #d6d6d6",
+              "margin": "0",
+              "font-style": "normal",
+              "font-weight": "400",
+              "line-height": "24.99px",
+              "text-transform": "none",
+              "letter-spacing": "0px",
+              "word-spacing": "0",
+              "direction": "ltr",
+              "border": "none",
+              "display": "list-item",
+              "text-align": "left",
+              "transition": "all 0.3s ease-out",
+              "cursor": "pointer"
+            },
+            ".mbr-shop .mbr-gallery-filter ul li.active": {
+              "background-color": "transparent",
+              "font-weight": "bold"
+            },
+            ".mbr-shop .mbr-gallery-filter ul li:before": {
+              "content": "\"\"",
+              "position": "absolute",
+              "left": "0",
+              "top": "50%",
+              "margin-top": "-2.5px",
+              "background": "rgba(0, 0, 0, 0.3)",
+              "width": "5px",
+              "height": "5px"
+            },
+            ".mbr-shop .mbr-gallery-filter ul li:hover": {
+              "padding-left": "30px",
+              "background-color": "transparent"
+            },
+            ".mbr-shop .range-slider": {
+              "padding-bottom": "25px"
+            },
+            ".mbr-shop .filter-cost": {
+              "display": "block",
+              "vertical-align": "middle",
+              "max-width": "250px",
+              "text-align": "left",
+              "position": "relative",
+              "margin-bottom": "30px"
+            },
+            ".mbr-shop .filter-cost p": {
+              "margin-bottom": "10px",
+              "font-size": "16px",
+              "line-height": "21px",
+              "color": "#666666",
+              "font-weight": "bold"
+            },
+            ".mbr-shop .price-controls": {
+              "position": "relative",
+              "height": "36px",
+              "margin-bottom": "30px",
+              "border": "2px solid #666666",
+              "border-radius": "2px",
+              "font-size": "0"
+            },
+            ".mbr-shop .price-controls label": {
+              "display": "inline-block",
+              "width": "50%",
+              "font-size": "14px",
+              "line-height": "32px",
+              "color": "#666666",
+              "font-weight": "normal",
+              "cursor": "pointer",
+              "margin-bottom": "0"
+            },
+            ".mbr-shop .price-controls label.min-price": {
+              "border-right": "2px solid #666666"
+            },
+            ".mbr-shop .price-controls input": {
+              "width": "100%",
+              "background-color": "#ffffff",
+              "border": "none",
+              "line-height": "31px",
+              "height": "31px",
+              "text-align": "center",
+              "-webkit-user-select": "none",
+              "-ms-user-select": "none",
+              "user-select": "none"
+            },
+            ".mbr-shop .range-controls": {
+              "position": "relative"
+            },
+            ".mbr-shop .range-controls .scale": {
+              "width": "100%",
+              "height": "2px",
+              "background-color": "rgba(190, 190, 190, 0.3)"
+            },
+            ".mbr-shop .range-controls .bar": {
+              "margin-left": "0",
+              "width": "100%",
+              "height": "2px",
+              "background-color": "#666666"
+            },
+            ".mbr-shop .toggle": {
+              "position": "absolute",
+              "top": "-9px",
+              "width": "4px",
+              "height": "4px",
+              "border": "8px solid #666666",
+              "border-radius": "100%",
+              "box-sizing": "content-box",
+              "background-color": "#ababab",
+              "cursor": "pointer"
+            },
+            ".mbr-shop .toggle:hover, .mbr-shop .toggle:active": {
+              "background-color": "#c0a375"
+            },
+            ".mbr-shop .min-toggle": {
+              "left": "0"
+            },
+            ".mbr-shop .max-toggle": {
+              "right": "0"
+            },
+            ".mbr-shop .hided-by-price": {
+              "display": "none"
+            },
+            ".mbr-shop .text-modal": {
+              "padding-right": "30px",
+              "padding-left": "30px"
+            },
+            ".mbr-shop .text-modal .item-button": {
+              "text-align": "left !important"
+            },
+            ".mbr-shop .text-modal .price-block": {
+              "line-height": "1",
+              "border-bottom": "1px dotted #d6d6d6"
+            },
+            ".mbr-shop .text-modal .price-block p": {
+              "display": "inline"
+            },
+            ".mbr-shop .text-modal .price-block span": {
+              "display": "inline",
+              "font-weight": "700",
+              "padding": "10px 0 20px 0"
+            },
+            ".mbr-shop .text-modal .card-description": {
+              "padding-top": "20px",
+              "display": "block",
+              "font-size": "16px",
+              "line-height": "24px",
+              "margin-bottom": "50px"
+            },
+            ".mbr-shop .modal-control-panel": {
+              "padding-right": "0"
+            },
+            ".mbr-shop .modal-cb": {
+              "display": "inline-block",
+              "float": "right",
+              "margin-right": "10px",
+              "margin-left": "10px"
+            },
+            ".mbr-shop .shopItemsModalBg": {
+              "width": "100%",
+              "height": "100%"
+            },
+            ".mbr-shop .close-modal-wrapper": {
+              "cursor": "pointer",
+              "width": "40px",
+              "height": "40px",
+              "position": "absolute",
+              "top": "0",
+              "right": "0"
+            },
+            ".mbr-shop .close-modal-wrapper:after": {
+              "content": "\"\"",
+              "position": "absolute",
+              "width": "40px",
+              "height": "3px",
+              "background-color": "#cccccc",
+              "top": "50%",
+              "right": "5%",
+              "transform": "rotate(-45deg)",
+              "-webkit-transform": "rotate(-45deg)"
+            },
+            ".mbr-shop .close-modal-wrapper:before": {
+              "content": "\"\"",
+              "position": "absolute",
+              "width": "3px",
+              "height": "40px",
+              "background-color": "#cccccc",
+              "right": "50%",
+              "top": "5%",
+              "transform": "rotate(-45deg)",
+              "-webkit-transform": "rotate(-45deg)"
+            },
+            ".mbr-shop .closeModal": {
+              "position": "absolute",
+              "top": "0",
+              "right": "0"
+            },
+            ".mbr-shop .galleryItem .sidebar_wraper": {
+              "text-align": "center"
+            },
+            ".mbr-shop .shopItemsModal .sidebar_wraper": {
+              "text-align": "left"
+            },
+            ".mbr-shop .shopItemsModal .onsale": {
+              "top": "10px",
+              "right": "10px",
+              "border": "1px solid #e7e7e7"
+            },
+            ".mbr-shop .shop-items .onsale, .mbr-shop .bestseller-block .onsale": {
+              "font-size": "15px !important"
+            },
+            ".mbr-shop .item_overlay": {
+              "position": "absolute",
+              "width": "100%",
+              "height": "100%",
+              "z-index": "99",
+              "background": "transparent"
+            },
+            ".mbr-shop .style_overlay": {
+              "position": "absolute",
+              "width": "100%",
+              "height": "100%"
+            },
+            ".mbr-shop .price-range": {
+              "display": "inline-block"
+            },
+            ".mbr-shop .price-range-reset": {
+              "display": "inline-block"
+            },
+            ".mbr-shop .bestsellers .item-button": {
+              "display": "none !important"
+            },
+            ".mbr-shop .range-slider h4": {
+              "margin-bottom": "15px"
+            },
+            ".mbr-shop .mbr-gallery-filter ul": {
+              "padding-left": "0px",
+              "display": "inline-block",
+              "list-style": "none",
+              "margin-bottom": "0px"
+            },
+            ".mbr-shop .categories:after": {
+              "content": "\"\"",
+              "display": "table",
+              "clear": "both"
+            },
+            "@media (min-width: 767px) and (max-width: 1100px)": {
+              ".mbr-shop .col-md-9": {
+                "width": "100%"
+              },
+              ".mbr-shop .col-md-3": {
+                "width": "100%"
+              },
+              ".mbr-shop .sidebar-background:after": {
+                "top": "0"
+              },
+              ".mbr-shop .bestseller-block": {
+                "width": "100%",
+                "margin": "0",
+                "display": "inline-block",
+                "float": "left",
+                "padding-top": "15px"
+              },
+              ".mbr-shop .range-slider": {
+                "width": "49%",
+                "margin": "0",
+                "display": "inline-block",
+                "float": "right",
+                "padding-top": "15px"
+              },
+              ".mbr-shop .bestsellers": {
+                "width": "100%"
+              },
+              ".mbr-shop .bestsellers .mbr-gallery-item": {
+                "width": "49%",
+                "display": "inline-block"
+              },
+              ".mbr-shop .sidebar-categories": {
+                "width": "49%",
+                "margin": "0",
+                "display": "inline-block",
+                "padding-top": "15px"
+              },
+              ".mbr-shop .price-range": {
+                "max-width": "250px",
+                "text-align": "center"
+              },
+              ".clearfix:after": {
+                "content": "\"\"",
+                "display": "table",
+                "clear": "both"
+              }
+            },
+            "@media (max-width: 991px) and (min-width: 768px)": {
+              ".mbr-shop .mbr-gallery-item": {
+                "width": "33%"
+              }
+            },
+            "@media (max-width: 500px)": {
+              ".mbr-shop .shopItemsModal": {
+                "padding": "50px 10px 10px 10px"
+              },
+              ".mbr-shop .shop-title": {
+                "max-width": "100%"
+              },
+              ".mbr-shop .mbr-gallery-item": {
+                "width": "100%"
+              }
+            },
+            "@media (max-width: 1200px)": {
+              ".mbr-shop .sort-buttons": {
+                "text-align": "center",
+                "margin-right": "0 !important"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".mbr-shop .image-modal": {
+                "text-align": "center"
+              },
+              ".mbr-shop .image-modal img": {
+                "max-height": "50vh",
+                "width": "auto",
+                "max-width": "100%"
+              },
+              ".mbr-shop .shopItemsModal": {
+                "top": "15%",
+                "bottom": "70px",
+                "left": "10%",
+                "width": "80%"
+              },
+              ".mbr-shop .shopItemsModal .image-modal": {
+                "padding-right": "0"
+              },
+              ".mbr-shop .sidebar-background:after": {
+                "top": "-1%"
+              }
+            },
+            "@media (max-width: 1100px)": {
+              ".mbr-shop .shopItemsModal": {
+                "max-height": "85vh",
+                "width": "90%",
+                "left": "5%",
+                "margin-left": "0"
+              },
+              ".mbr-shop .sort-buttons": {
+                "margin-right": "21px"
+              },
+              ".mbr-shop .sidebar-background:after": {
+                "right": "0",
+                "width": "100%"
+              },
+              ".mbr-shop .text-modal .card-description": {
+                "width": "100%"
+              },
+              ".mbr-shop .text-modal .price-block": {
+                "width": "100%"
+              },
+              ".mbr-shop .text-modal h4": {
+                "padding-top": "30px"
+              }
+            },
+            ".shopItemsModal_wraper .mbr-section-btn": {
+              "display": "block !important"
+            },
+            ".range-slider .mbr-section-btn": {
+              "margin": "0"
+            },
+            ".oldprice": {
+              "color": "#767676",
+              "padding-left": ".8rem",
+              "text-decoration": "line-through"
+            },
+            "@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)": {
+              ".shopItemsModal.row": {
+                "position": "absolute !important",
+                "top": "calc(50% ~'-' 300px) !important",
+                "left": "calc(50% ~'-' 500px) !important"
+              },
+              "& when (@shop__showPriceRange)": {
+                ".range-controls": {
+                  "display": "block !important"
+                }
+              }
+            }
+          },
+          "_name": "shop1",
+          "_customHTML": "<section class=\"mbr-gallery\" group=\"Shops\" plugins=\"mobirise-shop,Gallery\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"9\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"color\" title=\"On Sale Bg\" name=\"saleBg\" value=\"#ffef00\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\n        <input type=\"shop\" title=\"Shop\" name=\"shop\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div mbr-shop=\"shop\" class=\"mbr-shop\" show-sidebar card-buttons show-buttons></div>\n    </div>\n\n</section>",
+          "_cid": "qELYejPB3F",
+          "_anchor": "shop1-6",
+          "_protectedParams": [
+            "shop__showSidebar",
+            "shop__showCardButtons",
+            "shop__showSortButtons",
+            "shop__showBestSellers",
+            "shop__showPriceRange",
+            "shop__showTags",
+            "text_all",
+            "sidebar1",
+            "sidebar2",
+            "sidebar3",
+            "shop__filtersTextStyle",
+            "buttons_default_class",
+            "filter_by_d",
+            "filter_by_pu",
+            "filter_by_pd",
+            "price_range",
+            "price_range_reset",
+            "shop"
+          ],
+          "_global": false,
+          "_once": false,
+          "_params": {
+            "shop__showSidebar": false,
+            "shop__showCardButtons": true,
+            "shop__showSortButtons": false,
+            "shop__showBestSellers": true,
+            "shop__showPriceRange": true,
+            "shop__showTags": true,
+            "text_all": "All",
+            "sidebar1": "Best Sellers",
+            "sidebar2": "Price Range",
+            "sidebar3": "Filter",
+            "shop__filtersTextStyle": "display-7",
+            "filter_by_d": "<a class=\"btn btn-sm btn-primary disableSortButton\" href=\"\">Default sorting</a>",
+            "filter_by_pu": "<a class=\"btn btn-sm btn-primary-outline disableSortButton\" href=\"\">Price: low to high</a>",
+            "filter_by_pd": "<a class=\"btn btn-sm btn-primary-outline disableSortButton\" href=\"\">Price: high to low</a>",
+            "price_range": "<a class=\"btn btn-sm btn-primary\" data-app-btn=\"true\" href=\"\">Filter</a>",
+            "price_range_reset": "<a class=\"btn btn-sm btn-secondary\" data-app-btn=\"true\" href=\"\">Show all</a>",
+            "shop": [
+              {
+                "tags": "Awesome",
+                "bestSeller": true,
+                "onSale": true,
+                "oldPrice": true,
+                "itemTitle": "Gold G - Sea Cucumber",
+                "itemDescription": "Teripang Emas merupakan species terpilih dari 1000 species teripang di dunia. Jenis species terpilih ini memiliki warna keemasan (golden) dan sejarah sejak ratusan tahun yang lalu telah membuktikan manfaat dan khasiat dari teripang ini untuk berbagai masalah kesehatan dan kecantikan. \n<div>\n</div><div>INDIKASI\n</div><div>Nyeri persendian (arthritis) . Penyembuhan luka (antiseptik) . Membantu toleransi gula darah (kencing manis) . hipertensi . kolesterol . Masalah pencernaan . maag . Membantu masalah pernafasan . Sebagai penahan sakit alamiah (2x paracetamol)</div>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 150.000&nbsp;",
+                "oldPriceValue": "Rp 180.000",
+                "sale": "-30K",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Halo,%20Mas%20Jaya%20saya%20mau%20beli%20GoldG\" class=\"btn btn-primary display-7\">Beli Via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/untitled-design-2-444x444-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/untitled-design-2-444x444-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Cuka Apel, Tahesta, Herbal, Apple Cider",
+                "bestSeller": true,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Cuka Apel : Tahesta",
+                "itemDescription": "<p>Manfaat Cuka Apel Tahesta\n</p><p>- Menurunkan dan mengendalikan kadar kolesterol dalam darah\n</p><p>- Menurunkan tekanan darah tinggi\n</p><p>- Menstabilkan kadar gula darah\n, dll</p><p><br></p><p>Cara Minum : \n</p><p>* Campurkan 1-2 sendok makan Cuka Apel Tahesta ke dalam segelas (200 ml) air, hangat/ dingin. Bisa ditambah pemanis ( madu/ sirup/ gula)secukupnya. Gunakan gula rendah kalori bagi penderita diabetes/ obesitas.\n</p><p>* Bagi penderita maag, takaran dimulai dari 1 sendok teh. Jika tidak ada keluhan takaran dapat ditingkatkan menjadi 3 sendok teh.\n</p><p>* Minum rutin 3 kali sehari setelah makan</p><p></p>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 65.000",
+                "oldPriceValue": "$14",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Halo,%20Mas%20Jaya%20saya%20mau%20beli%20Cuka%20Apel%20Tahesta\" class=\"btn btn-primary display-7\">Beli Via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/untitled%20design-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/untitled-design-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Creative",
+                "bestSeller": false,
+                "onSale": true,
+                "oldPrice": true,
+                "itemTitle": "Jadied Kids Platinum",
+                "itemDescription": "<p>Jadied Kids Platinum Nutrisi Pertumbuhan Anak di produksi dari perpaduan herbal untuk menunjang tumbuh kembang si buah hati anda.</p><p><br>Cocok Untuk menambah nafsu makan anak</p><p><br></p><p>Aturan Pakai:\n</p><p>2 bulan - 1 tahun : 2 x 1 sendok teh per hari\n</p><p>1 tahun - 3 tahun : 2 x 1 sendok teh per hari\n</p><p>3 tahun - 12 tahun : 3 x 1-2 sendok makan per hari</p><p><br></p>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 25.000&nbsp;",
+                "oldPriceValue": "Rp 30.000",
+                "sale": "-5K",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20JadiedKids\" class=\"btn btn-primary display-7 note-editable\">Beli Via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/untitled-design-1-444x444-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/untitled-design-1-444x444-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-5K"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Madu Gemuk",
+                "itemDescription": "Madu Penggemuk Badan Original 100%. Madu herbal untuk remaja dan dewasa, menambah nafsu makan serta menunjang kebutuhan gizi&nbsp;",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 80.000",
+                "oldPriceValue": "$192",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20MaduGemuk\" class=\"btn btn-primary display-7 note-editable\">Beli Via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-26%20at%203.59.53%20pm-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-26-at-3.59.53-pm-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Responsive",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Madu Gemuk Anak",
+                "itemDescription": "<p>Madu Gemuk Badan Anak Original 100%. Madu herbal untuk anak usia 2-12 tahun, menambah nafsu makan serta menunjang kebutuhan gizi bagi pertumbuhan dan kecerdasannya.</p><p><br></p><p>Khasiat :\n</p><p>- Meningkatkan selera makan dan berat badan\n</p><p>- Menormalkan nafsu makan\n</p><p>- Meningkatkan konsentrasi anak dan perkembangan otak\n</p><p>- Membantu keterlambatan bicara\n</p><p>- Kaya akan kandungan nutrisi yang lengkap dan dalam bentuk yang siap serap</p>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "$73",
+                "oldPriceValue": "$146",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20MaduGemukAnak\" class=\"btn btn-primary display-7 note-air-editor note-editable\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-26%20at%203.59.55%20pm-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-26-at-3.59.55-pm-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Creative",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Madu Hitam Pahit - Arrohmah",
+                "itemDescription": "Madu hitam Ar Rohmah berasal dari Madu yang diambil dari pedalaman hutan,\r diproduksi oleh lebah penghisap nectar bunga yang pahit, diantaranya pelawan, mahoni, kopi, dll. Madu Hitam Pahit mengandung alkaloid yang tinggi sebagai anti infeksi dan antibiotik, sangat bermanfaat bagi kesehatan tubuh manusia.&nbsp;<div><br></div><div>- Mengobati diabetes/ kencing manis\r</div><div>- Mengobati gangguan fungsi seksual pria (lemah syahwat)\r</div><div>- Mengobati gangguan pada lambung (maag) kronis, dll</div>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 80.000",
+                "oldPriceValue": "$164",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20MaduHitamPahitArrohmah\" class=\"btn btn-primary display-7\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-26%20at%203.59.59%20pm-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-26-at-3.59.59-pm-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Animated",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Minyak Zaitun Al Amir",
+                "itemDescription": "<p>Minyak Zaitun Al Amir diproduksi menggunakan teknologi mutakhir, menjadikannya higienis dan aman untuk dikonsumsi </p><p><br></p><p>Jika diminum bermanfaat untuk :\n</p><div>- Menurunkan kolesterol&nbsp;<br></div><div>- Menguatkan kandung empedu\n</div><div>- Menurunkan kadar gula\n</div><div>- Menurunkan asam lambung\n</div><div>\n</div><div>Jika dioleskan bermanfaat untuk :\n</div><div>- Menghilangkan flek dan kerut di wajah&nbsp;<br></div><div>- Mencegah rontoknya rambut&nbsp;</div><p></p>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 45.000",
+                "oldPriceValue": "$42",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20ZaitunAlAmir\" class=\"btn btn-primary display-7 note-editable\">Beli Via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-26%20at%204.00.00%20pm-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-26-at-4.00.00-pm-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Minyak Pak Haji",
+                "itemDescription": "<p>MINYAK HERBA PAK HAJI sangat bermanfaat bagi anak-anak, dewasa maupun orang tua. Dapat digunakan untuk mengatasi masalah dari ujung rambut hingga ujung kaki . </p><p><br></p><p>diantara Khasiat MINYAK HERBA PAKHAJI antara lain: &nbsp;</p><div>1.Patah Tulang, minyak dipanaskan dan di oleskan dibagian yang patah, lalu di balut kain sambil mengkonsumsi radix 6 kapsul sehari. \n</div><div>2.Untuk Wasir/Ambeien Oleskan dibagian anus yang keluar, sambil mengkonsumsi ficus. 3.Darah tinggi dan lumpuh (stroke) MINYAK dipanaskan dan di oleskan dibagian tengkuk dan bagian tubuh yang sakit. \n</div><div>4.MINYAK Pak Haji ini sangat cocok Untuk urut/pijat/gosok karena tidak merusak syaraf kulit. \n</div><p></p>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 60.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20MinyakPakHaji\" class=\"btn btn-primary display-7\">Beli Via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-26%20at%204.00.01%20pm-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-26-at-4.00.01-pm-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Susu Jahe 41",
+                "itemDescription": "<p>\nSusu Jahe 41 seluruhnya dibuat oleh bahan alami. Tanpa pewarna, perisa dan pengawet</p><p></p><div><br></div><div>Susu Jahe 41 cocok untuk mengawali pagi hari Anda serta menemani Anda di malam hari</div><div><br></div><div>Manfaat Jahe Merah :\n</div><div>Menghangatkan dan menyegarkan seluruh tubuh \n</div><div>Meredakan gejala flu dan masuk angin \n</div><div><br></div><div>isi 10 renceng</div><p></p>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 15.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20SusuJahe41\" class=\"btn btn-primary display-7\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-26%20at%204.00.02%20pm-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-26-at-4.00.02-pm-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Madu AL SHIFA &nbsp;250gr",
+                "itemDescription": "<div>- Diolah dengan teknologi yang modern dan dikemas ke dalam Botol Kaca , sehingga tetap bersih, jernih, dan higienis saat dikonsumsi&nbsp;</div><div><br></div><div>-Madu impor dari Saudi Arabia ini dijamin 100 % keaslian dan kemurniannya oleh Saudi Arabian Standards Organization (SASO) dan telah memperoleh penghargaan produk berkualitas tinggi dari lembaga tersebut selama lebih dari 10 tahun\r</div>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp&nbsp;",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20MaduAlshifa\" class=\"btn btn-primary display-7\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-26%20at%204.07.37%20pm-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-26-at-4.07.37-pm-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Susu Kambing Merapi",
+                "itemDescription": "Susu Bubuk Kambing Etawa MERAPI merupakan sajian istimewa untuk menemani anda. Selain nikmat dengan rasa dan aroma yang khas, bermanfat pula untuk kesehatan\r<div>\r</div><div>Keunggulan Susu Bubuk Kambing Etawa\r</div><div>Mempunyai sifat antiseptik alami dan bisa membantu menekan pembiakan bakteri dalam tubuh.&nbsp;</div><div><br>Cocok untuk Anak-anak dan Dewasa</div>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "RP 30.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20SusuKambingMerapi\" class=\"btn btn-primary display-7 note-air-editor note-editable\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-26%20at%204.07.32%20pm-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-26-at-4.07.32-pm-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Susu Jahe 41 + Kacang Hijau\r",
+                "itemDescription": "<div>Jahe 41 - Kehangatan Jahe Merah Terbaik!&nbsp;<br></div><div>\r</div><div>Susu Jahe 41 rasa kacang hijau adalah paduan klasik antara hangatnya susu jahe merah usia 41 minggu dengan kelezatan kacang hijau.\r</div><div>\r</div><div>Tambahan Kacang Hijau menjadikan susu jahe 41 rasa kacang hijau sumber kalsium yang bermanfaat bagi kesehatan untuk memperkuat tulang. Rasakan hangat dan manfaat susu jahe 41 rasa kacang hijau bagi tubuh Anda.\r</div>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 15.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20SusuJaheKcgIjo\" class=\"btn btn-primary display-7 note-air-editor note-editable\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.57%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.57-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "EV Olive Oil Bertolli\r",
+                "itemDescription": "<div>Produk Import Italy\r</div><div><br></div><div>Extra virgin olive oil Bertolli diproses dengan teknologi mutakhir sehingga membuat kandungannya begitu alami</div><div><br></div><div>Minyak ini bisa diminum secara langsung, untuk pembersih make up di wajah sangat baik utk menghilangkan jerawat dan menutrisi bulu mata.\r</div><div>Selain itu sering dipakai untuk salad dressing dan bisa dipakai untuk menumis / menggoreng.\r</div>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp XXXX",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20ZaitunBertolli\" class=\"btn btn-primary display-7 note-air-editor note-editable\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.55%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.55-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Red Cap",
+                "itemDescription": "Casual shoes (contact us for sizing)<br><br><ul><li>Lightweight textured fabric</li> <li>Rounded v-neckline</li> <li>Pom pom trims</li> <li>Regular fit – true to size</li></ul> <br>Duis auctor hendrerit nisi, at lacinia ex vulputate quis. Suspendisse convallis iaculis tortor, quis mattis lectus rutrum a.<br><br>Product code: <b>385DDF5p</b>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "$56",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.16%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.16-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "SkyGoat Original\r",
+                "itemDescription": "<p>Sky Goat Susu Kambing Etawa Bubuk Full Cream </p><p><br></p><p>Dapat diminum oleh anak-anak di atas 1 tahun..&nbsp;<div>1 box isi 10 sachet\r</div><div>\r</div><div>Susu kambing Etawa Sky Goat\r</div><div>- Membantu melancarkan sistem pencernaan\r</div><div>- Membantu mengobati alergi pada kulit\r</div><div>- Menambah stamina dan daya tahan tubuh\r</div><div>- Dapat mencegah kerapuhan pada tulang\r</div></p>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp&nbsp;",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20SKYGOAT\" class=\"btn btn-primary display-7 note-air-editor note-editable\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.50%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.50-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Kurma Khenaizi 250gr",
+                "itemDescription": "<p>Kurma Date Crown Khaneizi adalah jenis kurma Date Crown dengan kualitas premium dan diimpor langsung dari Uni Emirat Arab. </p><p><br></p><p>Berasal dari kurma Emirat terbaik dengan rasa lebih lembut, hitam manis murni tanpa gula tambahan, biji kecil, lezat dan nikmat dan dikemas secara eksklusif ukuran 250gr dan cocok untuk dijadikan sebagai hadiah bagi rekan sejawat, karyawan atau karib kerabat.\r</p>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 30.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20KurmaKheneizi250gr\" class=\"btn btn-primary display-7 note-air-editor note-editable\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.49%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.49-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Kurma Khalas",
+                "itemDescription": "Date Palm Fruit Crown Khalas 1kg adalah kurma jenis Khalas berwarna hitam gelap bentuk lonjong sedang dengan tekstur daging yang kenyal dan rasa yang sangat manis. Kurma ini dikemas dalam kemasan box higienis 1 kg\r<div><br></div>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 90.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20KurmaKhalasDC1kg\" class=\"btn btn-primary display-7 note-air-editor note-editable\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.47%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.47-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "QnC Jelly Gamat",
+                "itemDescription": "<p>QnC Jelly Gamat diaolah langsung dari teripang segar, bukan dari ekstrak teripang. Sehingga khasiat dan kandungannya lebih terjaga. </p><p><br></p><p>Teripangnya pun terbuat dari 100% teripang emas</p><p>ATURAN KONSUMSI :&nbsp;<div>Bayi 0-5 tahun : 1-2 sdt / hari\r</div><div>Anak anak : 2x1 sdm / hari\r</div><div>Dewasa : 3x3-4 sdm&nbsp;</div></p>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 200.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20JellyGamatQnC\" class=\"btn btn-primary display-7 note-air-editor note-editable\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.45%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.45-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Kopi Arab&nbsp;",
+                "itemDescription": "<div>Habbat's Cafe diracik khusus dari bahan-bahan pilihan, tanpa bahan kopi sehingga bebas kafein, aman untuk penderita maag. Selain rasanya yang khas dan nikmat juga menyegarkan badan.&nbsp;<br></div><div><br></div><div>C\rocok untuk pecandu kopi maupun yang tidak suka kopi.\r</div><div><br>isi kemasan 30 sachet</div>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 75.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20KopiArab\" class=\"btn btn-primary display-7 note-editable\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.43%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.43-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Habbasyi Oil 100caps",
+                "itemDescription": "Minyak habbatussauda murni dalam kemasan kapsul, 100 % terbuat dari minyak Habbatussauda Habasyah ( Ethiopia ) yang telah diakui akan kualitas dan khasiatnya. Diproses dengan teknologi modern dengan pengawasan tenaga ahli farmasi yang berpengalaman sehingga lebih terjamin higienis.\r<div><br>cocok untuk segala macam penyakit berdasarkan hadits Nabi\r</div><div><br></div>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 55.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20HabbasyiOil\" class=\"btn btn-primary display-7 note-air-editor note-editable\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.41%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.41-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Kopi Ready - X Plus Gojiberry\n",
+                "itemDescription": "<div>Kopi Ready - X terbuat dari ramuan pilihan, diolah dengan teknologi modern, diracik dan ditangani oleh ahli gizi dan pangan yg berdedikasi dan profesional sehingga menghasilkan kopi khusus pa5utri yang bermutu, penuh khasiat, bebas kimia sintetik.&nbsp;<br></div><div>\n</div><div>Khasiat :&nbsp;<br></div><div>- Meningkatkan vitalitas\n</div><div>- Meningkatkan daya tahan tubuh\n</div><div>- Menambah 6airah cinta\n</div><div>- Meningkatkan stamina\n</div>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 50.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20KopiReadyX\" class=\"btn btn-primary display-7 note-editable\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.39%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.39-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "EV Zaitun Oil Alarobi 325ml",
+                "itemDescription": "<div>Al Arobi merupakan minyak zaitun perawan yang dihasilkan dari perasan buah zaitun pertama. Al Arobi merupakan minyak zaitun terbaik karena dipilih dari zaitun hijau yang terbentang di daratan Tursina menghasilkan:\r</div><div>Extra Virgin Olive Oil Tursina Mesir\r</div><div><br></div><div>Bermanfaat sebagai obat luar dan dalam (aman diminum atau dioleskan). Sebagai campuran makanan atau masakan, minyak urut, minyak rambut, penghalus kulit, untuk kecantikan wajah, dipijat ataupun lulur.\r</div>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 75.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20ZaitunAlArobi325ml\" class=\"btn btn-primary display-7\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.36%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.36-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Minyak Zaitun Le Riche",
+                "itemDescription": "Minyak Zaitun Le Riche Olive Oil LeRiche 300ml\r<div>\r</div><div>Minyak zaitun sudah terkenal sejak zaman Yunani Kuno, sebagai obat sekaligus untuk kecantikan para ratu. Di dunia kosmetik, minyak zaitun sekarang semakin banyak dipakai untuk bahan kecantikan karena terbukti dapat menjadikan kulit halus, sekaligus meremajakan. Minyak zaitun mengurangi resiko kematian akibat penyakit jantung dan kanker.&nbsp;</div>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 60.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20ZaitunLeriche\" class=\"btn btn-primary display-7 note-air-editor note-editable\">&nbsp;Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.35%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.35-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Al-Arobi Minyak Zaitun 85 Kapsul",
+                "itemDescription": "<p>Al-Arobi Minyak Zaitun 200 Kapsul Merupakan produk zaitun yg memiliki keunggulan dibanding jenis zaitun lainnya karena terbuat dari zaitun perasan pertama atau extra virgin olive oil. banyak di rekomendasi kan oleh para ahli kedokteran dunia bahwa zaitun extra virgin lebih cocok utk kesehatan, pengobatan, kecantikan dan bisa juga di gunakan sbg campuran masakan atau salad. </p><p><br></p><p>manfaat : 1. mengobati kolesterol 2. mencegah kegemukan 3. memperlambat proses penuaan 4. mencegah kropos tulang&nbsp;</p>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "Rp 40.000",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://api.whatsapp.com/send?phone=628231003937&text=Assalamualaikum,%20Mas%20Jaya%20saya%20mau%20beli%20ZaitunAlarobiKapsul\" class=\"btn btn-primary display-7\">Beli via WA</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.30%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.30-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "onsale": "-50%"
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Red Cap",
+                "itemDescription": "Casual shoes (contact us for sizing)<br><br><ul><li>Lightweight textured fabric</li> <li>Rounded v-neckline</li> <li>Pom pom trims</li> <li>Regular fit – true to size</li></ul> <br>Duis auctor hendrerit nisi, at lacinia ex vulputate quis. Suspendisse convallis iaculis tortor, quis mattis lectus rutrum a.<br><br>Product code: <b>385DDF5p</b>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "$56",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" class=\"btn btn-primary\" href=\"https://mobirise.com\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.26%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.26-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Red Cap",
+                "itemDescription": "Casual shoes (contact us for sizing)<br><br><ul><li>Lightweight textured fabric</li> <li>Rounded v-neckline</li> <li>Pom pom trims</li> <li>Regular fit – true to size</li></ul> <br>Duis auctor hendrerit nisi, at lacinia ex vulputate quis. Suspendisse convallis iaculis tortor, quis mattis lectus rutrum a.<br><br>Product code: <b>385DDF5p</b>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "$56",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" class=\"btn btn-primary\" href=\"https://mobirise.com\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.23%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.23-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Red Cap",
+                "itemDescription": "Casual shoes (contact us for sizing)<br><br><ul><li>Lightweight textured fabric</li> <li>Rounded v-neckline</li> <li>Pom pom trims</li> <li>Regular fit – true to size</li></ul> <br>Duis auctor hendrerit nisi, at lacinia ex vulputate quis. Suspendisse convallis iaculis tortor, quis mattis lectus rutrum a.<br><br>Product code: <b>385DDF5p</b>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "$56",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" class=\"btn btn-primary\" href=\"https://mobirise.com\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.20%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.20-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Red Cap",
+                "itemDescription": "Casual shoes (contact us for sizing)<br><br><ul><li>Lightweight textured fabric</li> <li>Rounded v-neckline</li> <li>Pom pom trims</li> <li>Regular fit – true to size</li></ul> <br>Duis auctor hendrerit nisi, at lacinia ex vulputate quis. Suspendisse convallis iaculis tortor, quis mattis lectus rutrum a.<br><br>Product code: <b>385DDF5p</b>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "$56",
+                "oldPriceValue": "$112",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" class=\"btn btn-primary\" href=\"https://mobirise.com\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp%20image%202017-12-27%20at%209.09.19%20am-444x444.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2017-12-27-at-9.09.19-am-444x444-444x444.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "caption": "Type caption here",
+                "active": true
+              }
+            ]
+          }
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background": "@bg-value",
+              "& when (@gradientBg)": {
+                "background": "linear-gradient(90deg, @bg-value, @color2)"
+              }
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".container-fluid": {
+              "padding": "0 3rem"
+            },
+            ".underline": {
+              "padding-top": ".5rem",
+              "padding-bottom": ".5rem",
+              ".line": {
+                "width": "5rem",
+                "height": "3px",
+                "background": "linear-gradient(90deg, @primaryColor, @secondaryColor)",
+                "display": "inline-block"
+              }
+            },
+            ".title-wrap": {
+              "padding-left": "0",
+              "padding-right": "0"
+            },
+            ".image-wrap": {
+              "overflow": "hidden",
+              "width": "100%",
+              "img": {
+                "width": "100%",
+                "height": "100%",
+                "z-index": "1",
+                "&:hover": {
+                  "transform": "scale(1.05)"
+                },
+                "transition": "all 0.5s ease-in-out"
+              }
+            },
+            ".content-section": {
+              "padding": "3rem"
+            },
+            ".btn": {
+              "margin-top": "1rem",
+              "margin-left": "0rem",
+              "margin-right": "0rem"
+            },
+            ".card-wrapper": {
+              "overflow": "hidden",
+              "margin-top": "1.6rem",
+              "background-color": "@cardColor",
+              "padding": "0rem",
+              "z-index": "10",
+              "border-radius": "15px",
+              "margin-bottom": "3rem"
+            },
+            "@media (max-width: 1200px)": {
+              ".container-fluid": {
+                "padding": "1rem"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".container-fluid": {
+                "padding": "0rem"
+              }
+            },
+            "@media (max-width: 439px)": {
+              ".card-wrapper": {
+                "margin-bottom": "0rem",
+                "border-radius": "0px"
+              },
+              ".title-wrap": {
+                "padding-left": "3rem",
+                "padding-right": "3rem"
+              }
+            }
+          },
+          "_name": "content9",
+          "_customHTML": "<section class=\"content9\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input inline type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input inline type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" checked condition=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Card Title\" name=\"showSubtitle\" checked>\n        <input type=\"color\" title=\"Card Color\" name=\"cardColor\" value=\"#ffffff\">\n        <input type=\"checkbox\" title=\"Show Image\" name=\"showImage\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\" selected>1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffef00\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"bg.type == 'color'\" checked>\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#009933\" condition=\"bg.type=='color'&&gradientBg\">\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container-fluid\">\n          <div class=\"row justify-content-center\">\n              <div class=\"col-12 col-md-10 col-lg-10 col-xl-7 title-wrap\">\n                <h2 class=\"mbr-title pt-2 mbr-fonts-style align-center mbr-black\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".underline,.mbr-title\">OUR BLOG</h2>\n                <div class=\"underline align-center\" mbr-if=\"showUnderline && showTitle\">\n                    <div class=\"line\"></div>\n                </div>\n              </div>\n        </div>\n        <div class=\"row justify-content-center\">\n            <div class=\"card-wrapper col-md-10 col-lg-10 col-xl-7\">\n                <div class=\"image-wrap align-left\" mbr-if=\"showImage\">\n                    <img src=\"@PROJECT_PATH@/assets/images/4-1-1024x576.png\" alt title>\n                </div>\n                <div class=\"content-section\">\n                    <h3 class=\"mbr-fonts-style mbr-section-subtitle pb-4\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle,.mbr-section-btn\" mbr-if=\"showSubtitle\">Sehat Ala Nabi</h3>\n                    <h3 class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">Tentu saja umat muslim menjadikan Nabi Muhammad shalallahu 'alaihi wasallam sebagai suri tauladan dalam setiap aspek kehidupan, mulai dari tata cara ibadah, akhlak bersama keluarga, adab bermajelis, hukum jual beli dan banyak lagi.&nbsp;<br><br>Tidak luput pula, pola hidup Rasulullah pun mejadi menarik disimak karena selain bisa mendapatkan kesehatan tubuh yang diidam-idamkan, kita juga bisa mendapatkan pahala mengikuti Sunnah Nabi 'alaihi sholawatu wa sallam.<br><br>Nah, apa saja hadits-hadits shohih tentang obat-obat herbal yang pernah Nabi konsumsi, temukan ulasannya disini</h3>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn align-left\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\"><a href=\"https://mobirise.com\" class=\"btn btn-primary-outline\">Lanjutkan Membaca</a></div>\n                </div>\n            </div>\n        </div>\n        <div class=\"row justify-content-center\">\n            <div class=\"card-wrapper col-md-10 col-lg-10 col-xl-7\" mbr-if=\"cardsAmount > 1\">\n                <div class=\"image-wrap align-left\" mbr-if=\"showImage\">\n                    <img src=\"../_images/img/11.jpg\" alt title>\n                </div>\n                <div class=\"content-section\">\n                    <h3 class=\"mbr-fonts-style mbr-section-subtitle pb-4\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle,.mbr-section-btn\" mbr-if=\"showSubtitle\">In The Know</h3>\n                    <h3 class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, odio recusandae, dolor dolorum nemo cupiditate alias, quo sed quidem impedit hic officiis dignissimos itaque atque. Quae culpa minima neque animi fugiat aliquam odio dolorem, quis modi error laborum veritatis corporis debitis, mollitia aut perferendis rem dicta?</h3>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn align-left\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                         <a href=\"https://mobirise.com\" class=\"btn btn-primary-outline\">CONTINUE READING</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"row justify-content-center\">\n            <div class=\"card-wrapper col-md-10 col-lg-10 col-xl-7\" mbr-if=\"cardsAmount > 2\">\n                <div class=\"image-wrap align-left\" mbr-if=\"showImage\">\n                    <img src=\"../_images/img/11.jpg\" alt title>\n                </div>\n                <div class=\"content-section\">\n                    <h3 class=\"mbr-fonts-style mbr-section-subtitle pb-4\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle,.mbr-section-btn\" mbr-if=\"showSubtitle\">New In Fashion</h3>\n                    <h3 class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, odio recusandae, dolor dolorum nemo cupiditate alias, quo sed quidem impedit hic officiis dignissimos itaque atque. Quae culpa minima neque animi fugiat aliquam odio dolorem, quis modi error laborum veritatis corporis debitis, mollitia aut perferendis rem dicta?</h3>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn align-left\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                         <a href=\"https://mobirise.com\" class=\"btn btn-primary-outline\">CONTINUE READING</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"row justify-content-center\">\n            <div class=\"card-wrapper col-md-10 col-lg-10 col-xl-7\" mbr-if=\"cardsAmount > 3\">\n                <div class=\"image-wrap align-left\" mbr-if=\"showImage\">\n                    <img src=\"../_images/img/11.jpg\" alt title>\n                </div>\n                <div class=\"content-section\">\n                    <h3 class=\"mbr-fonts-style mbr-section-subtitle pb-4\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle,.mbr-section-btn\" mbr-if=\"showSubtitle\">In The Know</h3>\n                    <h3 class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, odio recusandae, dolor dolorum nemo cupiditate alias, quo sed quidem impedit hic officiis dignissimos itaque atque. Quae culpa minima neque animi fugiat aliquam odio dolorem, quis modi error laborum veritatis corporis debitis, mollitia aut perferendis rem dicta?</h3>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn align-left\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                         <a href=\"https://mobirise.com\" class=\"btn btn-primary-outline\">CONTINUE READING</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qELYGUhoss",
+          "_anchor": "content9-7",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".row": {
+              "justify-content": "flex-start"
+            },
+            "& when (@blockAlign)": {
+              ".row": {
+                "justify-content": "flex-end"
+              }
+            },
+            ".form-container": {
+              "background": "rgba(255, 255, 255, 0.8) none repeat scroll 0 0",
+              "display": "inline-block",
+              "padding": "3rem",
+              "position": "relative"
+            },
+            ".mbr-section-title": {
+              "margin-left": "-4px"
+            },
+            ".media-container-column": {
+              "width": "100%"
+            },
+            ".form": {
+              "position": "relative",
+              "display": "inline-block",
+              "width": "100%"
+            },
+            ".mbr-section-btn": {
+              "a": {
+                "white-space": "nowrap"
+              }
+            },
+            ".form-group": {
+              "position": "relative",
+              "margin": "0",
+              "width": "100%",
+              ".form-control": {
+                "padding-left": "1rem"
+              }
+            },
+            "@media (min-width: 1600px)": {
+              ".my-col": {
+                "flex": "0 0 50%",
+                "max-width": "50%"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".form-container": {
+                "margin-left": "5rem",
+                "& when (@blockAlign)": {
+                  "margin-right": "5rem"
+                }
+              }
+            },
+            "@media (min-width: 768px)": {
+              ".mbr-section-btn": {
+                "display": "inline-block",
+                "position": "absolute",
+                "top": "0px",
+                "right": "10px"
+              },
+              ".form-group": {
+                "flex-direction": "row"
+              }
+            }
+          },
+          "_name": "form2",
+          "_customHTML": "<section group=\"Forms form2\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"10\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"10\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Form on Left/Right\" name=\"blockAlign\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background6.jpg\" parallax selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#000000\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\">\n    </div>\n    <div class=\"container-fluid text-center\" data-stellar-background-ratio=\".5\">\n      <div class=\"row\" mbr-if=\"showTitle || showSubtitle || showButton\">\n        <div class=\"col-sm-12 col-md-12 col-lg-8 col-xl-7 my-col\">\n            <div class=\"form-container align-left\">\n              <h2 mbr-if=\"showTitle\" class=\"mbr-section-title mbr-fonts-style mbr-black\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\">NEWSLETTER</h2>\n              <p class=\"mbr-text mbr-fonts-style pb-3 mbr-black\" mbr-if=\"showSubtitle\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Dapatkan resep sehat herbal lengkap dengan periwayatan hadits shohih melalui email Anda, <br>Daftar sekarang, GRATIS</p>\n              <div mbr-form class=\"media-container-column\">\n                  <div data-form-alert hidden>Thanks for filling out the form!</div>\n                  <form class=\"form mbr-form\" action method=\"post\" name=\"Mobirise Form\">\n                      <div class=\"form-group\">\n                          <input type=\"email\" class=\"form-control input-sm input-inverse special-form\" name=\"email\" required data-form-field=\"Email\" placeholder=\"Email\">\n                      </div>\n                      <div class=\"mbr-section-btn input-group-btn\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n                          <a href=\"https://mobirise.com/\" class=\"btn btn-primary\" type=\"submit\" role=\"button\">SUBSCRIBE</a>\n                      </div>\n                  </form>\n              </div>\n            </div>\n        </div>\n      </div>\n    </div>\n</section>",
+          "_cid": "qELZ14CV4i",
+          "_anchor": "form2-9",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_params": {
+            "token": "6418542831.727bfe1.d170e6c0da9042b08a77ab044151ea11",
+            "showTitle": true,
+            "layoutGridRadio": true,
+            "imagesPerRowGrid": 4,
+            "rows": 2,
+            "showMoreButton": true,
+            "layoutSliderRadio": false,
+            "imagesPerRowSlider": 4,
+            "spacing": 5,
+            "fullWidth": false,
+            "paddingTop": 1,
+            "paddingBottom": 1,
+            "bgColorRadio": false,
+            "bgColor": "#fafafa",
+            "bgImageRadio": true,
+            "bgImage": "@PROJECT_PATH@/assets/images/instagram-background.jpg",
+            "overlay": false,
+            "overlayColor": "#efefef",
+            "overlayOpacity": 0.6
+          },
+          "title": "Instagram Feed",
+          "buttons": "<a data-app-btn=\"true\" class=\"btn btn-md btn-primary display-4\" href=\"#\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,-mbrLink\">Show more</a>",
+          "display2": "display-2",
+          "display4": "display-4",
+          "alias": "instagram-feed",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "instagram-feed-block",
+          "_anchor": "instagram-feed-block-a"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "padding-left": "0",
+            "padding-right": "0",
+            "ul": {
+              "list-style": "none",
+              "padding": "0",
+              "margin": "0",
+              "li": {
+                "padding": "1rem 0",
+                "&:hover": {
+                  "color": "@primaryColor"
+                }
+              }
+            },
+            ".main": {
+              "& when (@reverseContent)": {
+                "flex-direction": "row-reverse"
+              }
+            },
+            ".socicon": {
+              "color": "#fff",
+              "font-size": "1.5rem"
+            },
+            ".mbr-iconfont": {
+              "margin-right": "1em",
+              "display": "inline-block",
+              "vertical-align": "bottom"
+            },
+            ".google-map": {
+              "height": "100%",
+              "position": "relative"
+            },
+            ".map": {
+              "padding": "0",
+              "height": "inherit !important"
+            },
+            ".social-list": {
+              "padding-left": "0",
+              "margin-bottom": "0",
+              "list-style": "none",
+              "display": "flex",
+              "flex-wrap": "wrap",
+              "justify-content": "flex-start",
+              "-webkit-justify-content": "flex-start",
+              ".soc-item": {
+                "padding": "0",
+                "margin": "2rem 2rem 0 0"
+              },
+              "a": {
+                "margin": "0",
+                "opacity": ".5",
+                "-webkit-transition": ".2s linear",
+                "transition": ".2s linear",
+                "&:hover": {
+                  "opacity": "1"
+                }
+              }
+            },
+            ".row-element,.image-element": {
+              "padding": "0"
+            },
+            ".underline": {
+              "padding-top": ".5rem",
+              "padding-bottom": ".5rem",
+              ".line": {
+                "width": "5rem",
+                "height": "3px",
+                "background": "linear-gradient(90deg, @primaryColor, @secondaryColor)",
+                "display": "inline-block"
+              }
+            },
+            "@media (min-width: 1500px)": {
+              ".text-content": {
+                "padding": "5rem"
+              }
+            },
+            "@media (min-width: 768px) and (max-width: 1499px)": {
+              ".text-content": {
+                "padding": "3rem"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".text-content": {
+                "padding": "2rem 1rem"
+              },
+              ".underline": {
+                ".line": {
+                  "height": "2px"
+                }
+              },
+              ".mbr-title,.underline,.mbr-text,.mbr-section-btn": {
+                "text-align": "center !important"
+              }
+            },
+            ".mbr-title,.underline": {
+              "color": "#ffffff"
+            },
+            ".mbr-text,.mbr-section-btn": {
+              "color": "#ffffff"
+            },
+            "mbr-list LI": {
+              "color": "#ffffff"
+            },
+            "mbr-list": {
+              "text-align": "center"
+            },
+            ".mbr-list,.social-list mbr-list": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "info3",
+          "_customHTML": "<section class=\"info3\" group=\"Info\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"ChIJt4MpiWSNmC0R_HGbfpq3D1o\" value=\"Jl. Prof. Dr. Abdurrauf Tarimana, Kambu, Kota Kendari, Sulawesi Tenggara 93231\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" condition=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show List\" name=\"showList\" checked>\n\n        <select title=\"Icons\" name=\"iconsCount\">\n            <option value=\"0\">0</option>\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\" selected>5</option>\n            <option value=\"6\">6</option>\n        </select>\n\n        <input type=\"checkbox\" title=\"Media on Left/Right\" name=\"reverseContent\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#232323\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container-fluid\">\n        <div class=\"row main\">\n            <div class=\"col-md-6 map\">\n              <div class=\"google-map\" mbr-map=\"googleMap\">\n    </div>\n            </div>\n            <div class=\"col-md-6 text-element\">\n                <div class=\"text-content\">\n                    <h2 class=\"mbr-title pt-2 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-title,.underline\">CONTACT INFORMATION</h2>\n                    <div class=\"underline align-left\" mbr-if=\"showUnderline && showTitle\">\n                         <div class=\"line\"></div>\n                    </div>\n                    <div class=\"mbr-section-text\">\n                        <p class=\"mbr-text pt-3 mbr-light mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-text\">Anda dapat menghubungi kami kapan saja. Kami melayani selama 24/7 via WA atau email. Anda juga dapat mengunjungi toko kami</p>\n                    </div>\n                    <div class=\"mbr-list  mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-list,.social-list\" data-multiline mbr-article mbr-if=\"showList\">\n                        <ul class=\"mbr-list mbr-fonts-style\" mbr-text mbr-theme-style=\"display-5\" data-app-selector=\"mbr-list\">\n                          <li> <span class=\"mbri-globe mbr-iconfont\"></span>&nbsp;Jl. Prof. Dr. Abdurrauf Tarimana, Kambu, Kota Kendari, Sulawesi Tenggara 93231</li>\n                          <li><span class=\"mbri-alert mbr-iconfont\"></span>+62 822 5921 0300</li>\n                          <li><span class=\"mbri-letter mbr-iconfont\"></span>sales@herbalzamzam.id</li>\n                        </ul>\n                    </div>\n                     <div class=\"social-list align-right\" mbr-if=\"iconsCount > 0\">\n                        <div class=\"soc-item\" mbr-if=\"iconsCount>0\">\n                            <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"socicon-twitter socicon mbr-iconfont mbr-iconfont-social\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"iconsCount>1\">\n                            <a href=\"https://www.facebook.com/pages/Mobirise/1616226671953247\" target=\"_blank\">\n                                <span mbr-icon class=\"socicon-facebook socicon mbr-iconfont mbr-iconfont-social\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"iconsCount>2\">\n                            <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"socicon-youtube socicon mbr-iconfont mbr-iconfont-social\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"iconsCount>3\">\n                            <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"socicon-instagram socicon mbr-iconfont mbr-iconfont-social\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"iconsCount>4\">\n                            <a href=\"https://plus.google.com/u/0/+Mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"socicon-googleplus socicon mbr-iconfont mbr-iconfont-social\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"iconsCount>5\">\n                            <a href=\"https://www.behance.net/Mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"socicon-behance socicon mbr-iconfont mbr-iconfont-social\"></span>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qEThUDeUYc",
+          "_anchor": "info3-f",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
